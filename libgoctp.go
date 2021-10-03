@@ -1,4 +1,4 @@
-// +build linux,cgo windows,cgo
+// +build linux,cgo
 
 // Copyright 2012 The Go Authors.  All rights reserved.
 // Use of this source code is governed by a BSD-style

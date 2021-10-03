@@ -1,14 +1,6 @@
-# goctp
-
-Golang bindings for CTP.
-
-
-
 ## Fix some issues
 
-
-
-### ThostFtdcUserApiDataType.h
+### ThostFtdcUserApiDataType.h**(v6.5.1 finished)**
 
 ```c
 #define THOST_FTDC_VTC_BankBankToFuture "102001"
@@ -22,19 +14,24 @@ Golang bindings for CTP.
 #define THOST_FTDC_FTC_BrokerLaunchBrokerToBank "202002"
 ```
 
+### ThostFtdcMdApi.h**(v6.5.1 finished)**
+
+```cpp
+class CThostFtdcMdSpi
+{
+public:
+    virtual ~CThostFtdcMdSpi(){};
+    ...
+```
 
 
-### Library file configuration
 
-```bash
-mv ./libthostmduserapi.so /usr/lib/libthostmduserapi.so
-mv ./libthosttraderapi.so /usr/lib/libthosttraderapi.so
+### ThostFtdcTraderApi.h**(v6.5.1 finished)**
 
-vim /etc/ld.so.conf
-/usr/lib/
-ldconfig
-
-# test
-gcc -lthostmduserapi --verbose
-gcc -lthosttraderapi --verbose
+```cpp
+class CThostFtdcTraderSpi
+{
+public:
+	virtual ~CThostFtdcTraderSpi(){};
+    ...
 ```
